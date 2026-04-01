@@ -1,7 +1,20 @@
+"use client";
+
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
+import { motion, Variants } from "framer-motion";
 
 export default function AboutPage() {
+    // Variants a tartalmi blokkokhoz (stagger)
+    const contentVariants: Variants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+        }
+    };
+
     return (
         <>
             <Navbar />
@@ -20,11 +33,16 @@ export default function AboutPage() {
                         <div className="absolute inset-0 bg-black/60" />
 
                         {/* HERO TEXT */}
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <motion.div
+                            className="absolute inset-0 flex items-center justify-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                        >
                             <h1 className="text-white text-3xl md:text-5xl font-serif tracking-wide">
                                 Rólunk
                             </h1>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* CONTENT */}
@@ -32,64 +50,59 @@ export default function AboutPage() {
                         <div className="max-w-5xl mx-auto">
 
                             {/* INTRO */}
-                            <div className="text-center mb-16">
+                            <motion.div
+                                className="text-center mb-16"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                variants={contentVariants}
+                            >
                                 <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-black/70">
                                     Régóta ismert, hogy egy esküvő legmeghatározóbb dísze maga a menyasszony.
                                     A tekintete, a kisugárzása és a ruhája együtt teremtik meg azt az emléket,
                                     amely örökre megmarad minden jelenlévő számára.
                                 </p>
-                            </div>
+                            </motion.div>
 
                             {/* CONTENT BLOCKS */}
-                            <div className="space-y-12 text-base md:text-lg leading-relaxed text-black/80">
-
-                                {/* MISSION */}
-                                <div className="text-center">
-                                    <p className="italic text-xl" style={{ color: "var(--color-gold)" }}>
-                                        „Minőség elérhető áron.”
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p>
-                                        Szalonunk mögött egy elkötelezett, szakértő csapat áll, akik nap mint nap
-                                        azon dolgoznak, hogy a menyasszonyok megtalálják álmaik ruháját.
-                                        Folyamatosan követjük a legújabb divattrendeket, gondosan válogatjuk ki
-                                        az alapanyagokat és a legapróbb részletekre is kiemelt figyelmet fordítunk.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p>
-                                        Minden egyes ruhánk különleges. Nem csupán egy öltözék, hanem egy élmény,
-                                        amely eleganciát, nőiességet és finom kifinomultságot sugároz.
-                                        Olyan darabokat kínálunk, amelyek nemcsak szépek, hanem valóban
-                                        megragadják a figyelmet és felejthetetlenné teszik a nagy napot.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p>
-                                        Tudjuk, hogy ma már számos szalon kínál menyasszonyi ruhákat.
-                                        Mi mégis abban hiszünk, hogy a minőség és az egyediség nem kell,
-                                        hogy elérhetetlen legyen. Nálunk olyan ruhákat találsz,
-                                        amelyek sok esetben bérlési ár alatt megvásárolhatók —
-                                        kompromisszumok nélkül.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p>
-                                        Szeretnénk, ha ezt Te magad is megtapasztalnád.
-                                        Látogass el bemutató szalonunkba, ismerd meg kínálatunkat,
-                                        és találd meg azt a ruhát, amelyben igazán önmagad lehetsz.
-                                    </p>
-                                </div>
-
-                            </div>
+                            <motion.div
+                                className="space-y-12 text-base md:text-lg leading-relaxed text-black/80"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-50px" }}
+                                variants={{
+                                    hidden: {},
+                                    visible: {
+                                        transition: { staggerChildren: 0.2 }
+                                    }
+                                }}
+                            >
+                                {[
+                                    "„Minőség elérhető áron.”",
+                                    "Szalonunk mögött egy elkötelezett, szakértő csapat áll, akik nap mint nap azon dolgoznak, hogy a menyasszonyok megtalálják álmaik ruháját. Folyamatosan követjük a legújabb divattrendeket, gondosan válogatjuk ki az alapanyagokat és a legapróbb részletekre is kiemelt figyelmet fordítunk.",
+                                    "Minden egyes ruhánk különleges. Nem csupán egy öltözék, hanem egy élmény, amely eleganciát, nőiességet és finom kifinomultságot sugároz. Olyan darabokat kínálunk, amelyek nemcsak szépek, hanem valóban megragadják a figyelmet és felejthetetlenné teszik a nagy napot.",
+                                    "Tudjuk, hogy ma már számos szalon kínál menyasszonyi ruhákat. Mi mégis abban hiszünk, hogy a minőség és az egyediség nem kell, hogy elérhetetlen legyen. Nálunk olyan ruhákat találsz, amelyek sok esetben bérlési ár alatt megvásárolhatók — kompromisszumok nélkül.",
+                                    "Szeretnénk, ha ezt Te magad is megtapasztalnád. Látogass el bemutató szalonunkba, ismerd meg kínálatunkat, és találd meg azt a ruhát, amelyben igazán önmagad lehetsz."
+                                ].map((text, i) => (
+                                    <motion.div
+                                        key={i}
+                                        variants={contentVariants}
+                                        className={i === 0 ? "text-center italic text-xl" : ""}
+                                        style={i === 0 ? { color: "var(--color-gold)" } : {}}
+                                    >
+                                        <p>{text}</p>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
 
                             {/* CTA */}
-                            <div className="text-center mt-16">
+                            <motion.div
+                                className="text-center mt-16"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.5 }}
+                            >
                                 <a
                                     href="/contact"
                                     className="inline-block px-8 py-4 text-sm tracking-wide rounded-md transition text-white hover:opacity-90"
@@ -97,7 +110,7 @@ export default function AboutPage() {
                                 >
                                     Időpontfoglalás
                                 </a>
-                            </div>
+                            </motion.div>
 
                         </div>
                     </div>

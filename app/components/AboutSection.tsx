@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function AboutSection() {
     return (
         <section
@@ -7,17 +11,25 @@ export default function AboutSection() {
             <div className="max-w-4xl mx-auto text-center">
 
                 {/* TITLE */}
-                <h2
+                <motion.h2
                     className="text-2xl md:text-4xl font-serif mb-8"
                     style={{ color: "var(--color-primary)" }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 >
                     Rólunk
-                </h2>
+                </motion.h2>
 
-                {/* TEXT */}
-                <div
-                    className="space-y-6 text-sm md:text-base leading-relaxed"
+                {/* TEXT BLOCK */}
+                <motion.div
+                    className="space-y-6 text-sm md:text-base leading-relaxed will-change-transform"
                     style={{ color: "rgba(0,0,0,0.7)" }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <p>
                         Régóta ismert, hogy az esküvő fő dekorációja a menyasszony.
@@ -53,13 +65,19 @@ export default function AboutSection() {
                         minőségéről és rendkívül kedvező árukról, javasoljuk, hogy látogass el
                         bemutató szalonunkba. Kérj időpontot ruhapróbára. Szeretettel várunk!
                     </p>
-                </div>
+                </motion.div>
 
                 {/* CTA */}
-                <div className="mt-10">
+                <motion.div
+                    className="mt-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.7 }}
+                >
                     <a
                         href="tel:+36707880888"
-                        className="inline-block px-6 py-3 rounded-md text-sm transition"
+                        className="inline-block px-6 py-3 rounded-md text-sm transition hover:opacity-90"
                         style={{
                             backgroundColor: "var(--color-primary)",
                             color: "white",
@@ -67,7 +85,7 @@ export default function AboutSection() {
                     >
                         Időpontfoglalás telefonon
                     </a>
-                </div>
+                </motion.div>
 
             </div>
         </section>

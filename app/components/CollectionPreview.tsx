@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const collections = [
     {
@@ -27,72 +28,105 @@ export default function CollectionPreview() {
             <div className="max-w-6xl mx-auto">
 
                 {/* TITLE */}
-                <div className="text-center mb-10">
+                <motion.div
+                    className="text-center mb-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                >
                     <h2
                         className="text-2xl md:text-4xl font-serif mb-4"
                         style={{ color: "var(--color-primary)" }}
                     >
                         Kollekciók
                     </h2>
-                    <p className="text-sm md:text-base" style={{ color: "rgba(0,0,0,0.6)" }}>
+                    <p
+                        className="text-sm md:text-base"
+                        style={{ color: "rgba(0,0,0,0.6)" }}
+                    >
                         Fedezd fel különböző stílusainkat, és találd meg a hozzád illőt.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.2,
+                            },
+                        },
+                    }}
+                >
                     {collections.map((item, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             className="group relative w-full h-75 overflow-hidden rounded-lg"
+                            variants={{
+                                hidden: { opacity: 0, y: 40 },
+                                visible: {
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 0.8,
+                                        ease: [0.22, 1, 0.36, 1],
+                                    },
+                                },
+                            }}
                         >
                             {/* IMAGE */}
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                fill
-                                className="object-cover transition duration-500 group-hover:scale-105"
-                            />
+                            <motion.div
+                                className="absolute inset-0"
+                                initial={{ scale: 1.1 }}
+                                whileInView={{ scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                            >
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition duration-500"
+                                />
+                            </motion.div>
 
                             {/* OVERLAY */}
                             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
 
                             {/* TEXT */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <h3
-                                    className="text-lg font-serif text-center px-2"
-                                    style={{ color: "white" }}
-                                >
+                                <h3 className="text-lg font-serif text-center px-2 text-white transition duration-300 group-hover:tracking-wide">
                                     {item.title}
                                 </h3>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* CTA */}
-                <div className="text-center mt-10">
+                <motion.div
+                    className="text-center mt-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.7 }}
+                >
                     <Link
                         href="https://www.facebook.com/odetteszalon/photos"
-                        className="inline-block px-6 py-3 rounded-md text-sm border transition"
+                        className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white"
                         style={{
                             borderColor: "var(--color-gold)",
-                            color: "var(--color-gold)",
-                        }}
-                        onMouseEnter={(e) => {
-                            const el = e.currentTarget as HTMLAnchorElement;
-                            el.style.backgroundColor = "var(--color-gold)";
-                            el.style.color = "white";
-                        }}
-                        onMouseLeave={(e) => {
-                            const el = e.currentTarget as HTMLAnchorElement;
-                            el.style.backgroundColor = "transparent";
-                            el.style.color = "var(--color-gold)";
                         }}
                     >
                         Facebook katalógus megtekintése
                     </Link>
-                </div>
+                </motion.div>
 
             </div>
         </section>

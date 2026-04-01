@@ -47,6 +47,19 @@ export default function CollectionPreview() {
                     >
                         Fedezd fel különböző stílusainkat, és találd meg a hozzád illőt.
                     </p>
+                    <motion.div
+                        className="text-center mb-8 mt-4 text-black/60 text-sm md:text-base"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
+                        <p>
+                            Ruháink ára: <span className="font-medium" style={{ color: "var(--color-primary)" }}>
+                                150 000 – 250 000 Ft
+                            </span>
+                        </p>
+                    </motion.div>
+
                 </motion.div>
 
                 {/* GRID */}

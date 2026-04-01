@@ -86,6 +86,11 @@ export default function CollectionsPage() {
                         <p className="text-black/70">
                             Tekintsd meg teljes kínálatunkat, és inspirálódj további modelljeinkből.
                         </p>
+                        <p className="text-sm">
+                            Ruháink ára: <span className="font-medium" style={{ color: "var(--color-primary)" }}>
+                                150 000 – 250 000 Ft
+                            </span>
+                        </p>
 
                         <Link
                             href="https://www.facebook.com/odetteszalon/photos"
@@ -108,7 +113,7 @@ export default function CollectionsPage() {
                     </div>
 
                 </div>
-            </main>
+            </main >
             <Footer />
         </>
     );

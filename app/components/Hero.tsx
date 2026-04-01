@@ -13,7 +13,7 @@ export default function Hero() {
             />
 
             {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80" />
 
             {/* CONTENT */}
             <div className="relative z-10 px-6 max-w-xl">
@@ -33,7 +33,7 @@ export default function Hero() {
                 </p>
 
                 {/* CTA BUTTONS */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 backdrop-blur-2xl">
 
                     {/* PHONE CTA */}
                     <a

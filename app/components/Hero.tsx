@@ -8,18 +8,18 @@ export default function Hero() {
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: "url('/hero.jpg')",
+                    backgroundImage: "url('/hero.webp')",
                 }}
             />
 
             {/* OVERLAY */}
-            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/80" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/50 to-black/80" />
 
             {/* CONTENT */}
             <div className="relative z-10 px-6 max-w-xl">
 
                 <h1
-                    className="text-3xl md:text-5xl font-serif leading-tight mb-6"
+                    className="text-4xl md:text-5xl font-serif leading-tight mb-6"
                     style={{ color: "var(--color-primary)" }}
                 >
                     Találd meg álmaid ruháját

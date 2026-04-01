@@ -11,7 +11,7 @@ export default function AboutPage() {
                     {/* HERO IMAGE */}
                     <div className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden">
                         <img
-                            src="/banner-img-about.jpg"
+                            src="/banner-img-about.webp"
                             alt="Rólunk banner"
                             className="w-full h-full object-cover"
                         />

@@ -8,15 +8,15 @@ import Navbar from "../components/Navbar";
 const collections = [
     {
         title: "Klasszikus elegancia",
-        image: "/classic.jpg",
+        image: "/classic.webp",
     },
     {
         title: "Modern minimalizmus",
-        image: "/modern.jpg",
+        image: "/modern.webp",
     },
     {
         title: "Plus size",
-        image: "/plus_size.jpg",
+        image: "/plus_size.webp",
     },
 ];
 

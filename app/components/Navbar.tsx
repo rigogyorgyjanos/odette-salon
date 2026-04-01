@@ -107,24 +107,24 @@ export default function Navbar() {
                             className="flex flex-col gap-6"
                         >
                             <motion.div variants={itemVariants}>
-                                <Link href="/" onClick={() => setOpen(false)} className="text-2xl">
+                                <Link href="/" onClick={() => setOpen(false)} className="text-xl">
                                     Főoldal
                                 </Link>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <Link href="/collections" onClick={() => setOpen(false)} className="text-2xl">
+                                <Link href="/collections" onClick={() => setOpen(false)} className="text-xl">
                                     Kollekciók
                                 </Link>
                             </motion.div>
 
                             <motion.div variants={itemVariants}>
-                                <Link href="/about" onClick={() => setOpen(false)} className="text-2xl">
+                                <Link href="/about" onClick={() => setOpen(false)} className="text-xl">
                                     Rólunk
                                 </Link>
                             </motion.div>
 
                             <motion.div variants={itemVariants}>
-                                <Link href="/contact" onClick={() => setOpen(false)} className="text-2xl">
+                                <Link href="/contact" onClick={() => setOpen(false)} className="text-xl">
                                     Kapcsolat
                                 </Link>
                             </motion.div>
@@ -138,28 +138,25 @@ export default function Navbar() {
                                 style={{ backgroundColor: "var(--color-primary)" }}
                             />
 
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-4 text-center">
                                 {/* FACEBOOK */}
-                                <a
-                                    href="https://www.facebook.com/odetteszalon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full text-center py-3 border transition-all duration-300 hover:opacity-70"
+                                <Link
+                                    href="https://www.facebook.com/odetteszalon/photos"
+                                    className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white"
                                     style={{
-                                        borderColor: "var(--color-primary)",
-                                        color: "var(--color-primary)"
+                                        borderColor: "var(--color-gold)",
                                     }}
                                 >
                                     Facebook
-                                </a>
+                                </Link>
 
                                 {/* CALL BUTTON */}
                                 <a
-                                    href="tel:++36707880888"
-                                    className="w-full text-center py-3 transition-all duration-300"
+                                    href="tel:+36707880888"
+                                    className="py-3 rounded-md text-sm tracking-wide transition hover:opacity-90"
                                     style={{
                                         backgroundColor: "var(--color-primary)",
-                                        color: "var(--color-background)"
+                                        color: "white",
                                     }}
                                 >
                                     Hívjon minket

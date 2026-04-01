@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <>
             <Navbar />
-            <main className="py-10">
+            <main className="">
                 <ContactSection />
             </main>
             <Footer />

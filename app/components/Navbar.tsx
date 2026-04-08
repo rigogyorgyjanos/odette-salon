@@ -44,7 +44,7 @@ export default function Navbar() {
                     className="font-serif text-xl tracking-wide"
                     style={{ color: "var(--color-primary)" }}
                 >
-                    ODETTE
+                    Odette Menyasszonyi Ruhaszalon
                 </Link>
 
                 {/* MOBILE BUTTON */}
@@ -58,8 +58,9 @@ export default function Navbar() {
 
                 {/* DESKTOP */}
                 <div className="hidden md:flex gap-8 text-sm font-medium">
-                    <Link href="/collections" style={{ color: "var(--color-primary)" }}>Kollekciók</Link>
                     <Link href="/about" style={{ color: "var(--color-primary)" }}>Rólunk</Link>
+                    <Link href="/#testimonials" style={{ color: "var(--color-primary)" }}>Vélemények</Link>
+                    <Link href="/collections" style={{ color: "var(--color-primary)" }}>Kollekciók</Link>
                     <Link href="/contact" style={{ color: "var(--color-primary)" }}>Kapcsolat</Link>
                 </div>
             </div>
@@ -80,7 +81,7 @@ export default function Navbar() {
                                 className="font-serif text-xl tracking-wide"
                                 style={{ color: "var(--color-primary)" }}
                             >
-                                ODETTE
+                                Odette Menyasszonyi Ruhaszalon
                             </span>
 
                             <button
@@ -111,15 +112,22 @@ export default function Navbar() {
                                     Főoldal
                                 </Link>
                             </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <Link href="/collections" onClick={() => setOpen(false)} className="text-xl">
-                                    Kollekciók
-                                </Link>
-                            </motion.div>
 
                             <motion.div variants={itemVariants}>
                                 <Link href="/about" onClick={() => setOpen(false)} className="text-xl">
                                     Rólunk
+                                </Link>
+                            </motion.div>
+
+                            <motion.div variants={itemVariants}>
+                                <Link href="/#testimonials" onClick={() => setOpen(false)} className="text-xl">
+                                    Vélemények
+                                </Link>
+                            </motion.div>
+
+                            <motion.div variants={itemVariants}>
+                                <Link href="/collections" onClick={() => setOpen(false)} className="text-xl">
+                                    Kollekciók
                                 </Link>
                             </motion.div>
 

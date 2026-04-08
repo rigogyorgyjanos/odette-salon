@@ -18,6 +18,8 @@ const itemVariants: Variants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
 };
 
+const MotionImage = motion(Image);
+
 export default function CollectionsPage() {
     return (
         <>
@@ -26,7 +28,18 @@ export default function CollectionsPage() {
 
                 {/* HERO */}
                 <div className="relative w-full h-[50vh] md:h-[60vh]">
-                    <Image src="/collection-banner.jpg" alt="Kollekciók" fill className="object-cover" />
+                    <MotionImage
+                        src="/collection-banner.jpg"
+                        loading="eager"
+                        alt="Kollekciók"
+                        priority
+                        fill
+                        className="object-cover"
+                        initial={{ scale: 1.05 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+
+                    />
                     <div className="absolute inset-0 bg-black/40" />
                     <div className="absolute inset-0 flex items-center justify-center">
                         <h1 className="text-white text-3xl md:text-5xl font-serif">Kollekciók</h1>
@@ -57,8 +70,11 @@ export default function CollectionsPage() {
                                 <Image
                                     src={item.image}
                                     alt={item.title}
+                                    loading="lazy"
                                     fill
                                     className="object-cover transition duration-700 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                 />
                                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
                                 <div className="absolute inset-0 flex items-center justify-center">

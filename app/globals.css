@@ -5,8 +5,17 @@
   --color-primary: #2f2672;
   --color-primary-hover: #2a2170;
   --color-gold: #d0a73e;
-  --color-blush: #ead1d4;
+  --color-blush: #e7dadc;
+  /* 
+  #ead1d4; 
+  #fcdbd2
+  */
   --color-background: #faf9f7;
+}
+
+html {
+  scroll-behavior: smooth;
+
 }
 
 /* FONTOK */

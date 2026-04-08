@@ -1,7 +1,7 @@
-"use client";
-
+"use client"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 export default function AboutPage() {
@@ -14,6 +14,7 @@ export default function AboutPage() {
             transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
         }
     };
+    const MotionImage = motion(Image);
 
     return (
         <>
@@ -21,28 +22,25 @@ export default function AboutPage() {
             <main>
                 <section style={{ backgroundColor: "var(--color-background)" }}>
 
-                    {/* HERO IMAGE */}
-                    <div className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden">
-                        <img
+
+                    {/* HERO */}
+                    <div className="relative w-full h-[50vh] md:h-[60vh]">
+                        <MotionImage
                             src="/banner-img-about.webp"
-                            alt="Rólunk banner"
-                            className="w-full h-full object-cover"
+                            loading="eager"
+                            alt="Kollekciók"
+                            priority
+                            fill
+                            className="object-cover"
+                            initial={{ scale: 1.05 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+
                         />
-
-                        {/* OVERLAY */}
-                        <div className="absolute inset-0 bg-black/60" />
-
-                        {/* HERO TEXT */}
-                        <motion.div
-                            className="absolute inset-0 flex items-center justify-center"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
-                        >
-                            <h1 className="text-white text-3xl md:text-5xl font-serif tracking-wide">
-                                Rólunk
-                            </h1>
-                        </motion.div>
+                        <div className="absolute inset-0 bg-black/40" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <h1 className="text-white text-3xl md:text-5xl font-serif">Rólunk</h1>
+                        </div>
                     </div>
 
                     {/* CONTENT */}
@@ -94,7 +92,6 @@ export default function AboutPage() {
                                     </motion.div>
                                 ))}
                             </motion.div>
-
                             {/* CTA */}
                             <motion.div
                                 className="text-center mt-16"
@@ -110,6 +107,57 @@ export default function AboutPage() {
                                 >
                                     Időpontfoglalás
                                 </a>
+                            </motion.div>
+
+
+                            {/* AWARD SECTION */}
+                            <motion.div
+                                className=" w-full mt-20 mb-10"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                style={{ backgroundColor: "var(--color-blush)" }}
+                            >
+                                <div
+                                    className=" overflow-hidden shadow-sm md:flex"
+
+                                >
+                                    {/* IMAGE */}
+                                    <div className="md:w-1/2 w-full">
+                                        <img
+                                            src="/turul_eskuvo_.png" // <-- ide tedd a képed
+                                            alt="Turul Esküvő Díj 2024"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+
+                                    {/* TEXT */}
+                                    <div className="md:w-1/2 w-full p-6 md:p-10 flex flex-col justify-center text-center md:text-left">
+
+                                        {/* TITLE */}
+                                        <h3
+                                            className="text-xl md:text-2xl font-serif mb-4"
+                                            style={{ color: "var(--color-primary)" }}
+                                        >
+                                            Turul Esküvő Díj 2024
+                                        </h3>
+
+                                        {/* TEXT */}
+                                        <p className="text-sm md:text-base text-black/70 leading-relaxed mb-4">
+                                            Büszkék vagyunk rá, hogy szalonunk elnyerte a{" "}
+                                            <span style={{ color: "var(--color-primary)", fontWeight: 500 }}>
+                                                2024-es Turul Esküvő Díjat
+                                            </span>.
+                                        </p>
+
+                                        <p className="text-sm md:text-base text-black/70 leading-relaxed">
+                                            Ez a szakmai elismerés visszaigazolja mindazt az elhivatottságot,
+                                            figyelmet és minőséget, amit minden menyasszonyunknak nyújtunk.
+                                        </p>
+
+                                    </div>
+                                </div>
                             </motion.div>
 
                         </div>

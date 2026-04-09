@@ -8,7 +8,7 @@ export default function AboutSection() {
             className="py-16 px-4"
             style={{ backgroundColor: "var(--color-blush)" }}
         >
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-2xl md:max-w-3xl mx-auto text-center">
 
                 {/* TITLE */}
                 <motion.h2
@@ -24,12 +24,12 @@ export default function AboutSection() {
 
                 {/* TEXT BLOCK */}
                 <motion.div
-                    className="space-y-6 text-sm md:text-base leading-relaxed will-change-transform"
+                    className="space-y-5 md:space-y-6 text-base md:text-lg leading-relaxed will-change-transform"
                     style={{ color: "rgba(0,0,0,0.7)" }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <p>
                         Régóta ismert, hogy az esküvő fő dekorációja a menyasszony.
@@ -37,7 +37,7 @@ export default function AboutSection() {
                         esküvői ruha, amelyre minden jelenlévő emlékezni fog ezen az ünnepen.
                     </p>
 
-                    <p style={{ color: "var(--color-primary)", fontWeight: 500 }}>
+                    <p className="text-lg md:text-xl font-semibold" style={{ color: "var(--color-primary)" }}>
                         Fő küldetésünk: minőség elérhető áron!
                     </p>
 
@@ -69,7 +69,7 @@ export default function AboutSection() {
 
                 {/* CTA */}
                 <motion.div
-                    className="mt-10"
+                    className="mt-12 md:mt-14"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -77,7 +77,7 @@ export default function AboutSection() {
                 >
                     <a
                         href="tel:+36707880888"
-                        className="inline-block px-6 py-3 rounded-md text-sm transition hover:opacity-90"
+                        className="inline-block px-7 py-3.5 rounded-md text-base font-medium transition hover:opacity-90"
                         style={{
                             backgroundColor: "var(--color-primary)",
                             color: "white",

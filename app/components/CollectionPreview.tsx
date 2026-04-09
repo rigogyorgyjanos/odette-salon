@@ -36,13 +36,13 @@ export default function CollectionPreview() {
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <h2
-                        className="text-2xl md:text-4xl font-serif mb-4"
+                        className="text-3xl md:text-5xl font-serif mb-4"
                         style={{ color: "var(--color-primary)" }}
                     >
                         Kollekciók
                     </h2>
                     <p
-                        className="text-sm md:text-base"
+                        className="text-base md:text-lg"
                         style={{ color: "rgba(0,0,0,0.6)" }}
                     >
                         Fedezd fel különböző stílusainkat, és találd meg a hozzád illőt.

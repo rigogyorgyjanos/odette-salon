@@ -14,6 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Odette Menyasszonyi Szalon",
+  metadataBase: new URL('https://www.odette.hu/'),
+
   description:
     "Minőségi menyasszonyi ruhák elérhető áron. Találd meg álmaid ruháját Budapest szívében az Odette Menyasszonyi Szalonban.",
   keywords: [
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     title: "Odette Menyasszonyi Szalon",
     description:
       "Fedezd fel kollekciónkat és találd meg a tökéletes menyasszonyi ruhát.",
-    url: "https://odetteszalon.hu",
+    url: "https://www.odette.hu/",
     siteName: "Odette Menyasszonyi Szalon",
     images: [
       {

@@ -18,7 +18,7 @@ const itemVariants: Variants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
 };
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 export default function CollectionsPage() {
     return (

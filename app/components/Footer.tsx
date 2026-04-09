@@ -16,12 +16,13 @@ export default function Footer() {
                             alt="Odette Szalon"
                             className="h-30 "
                         />
-                        
+
                     </div>
 
                     {/* NAV */}
                     <div className="flex gap-6 text-sm text-black/70 underline underline-offset-2">
                         <a href="/" className="hover:text-black transition">Főoldal</a>
+                        <a href="/#testimonials" className="hover:text-black transition">Vélemények</a>
                         <a href="/about" className="hover:text-black transition">Rólunk</a>
                         <a href="/collections" className="hover:text-black transition">Kollekció</a>
                         <a href="/contact" className="hover:text-black transition">Kapcsolat</a>
@@ -52,6 +53,20 @@ export default function Footer() {
                             className="hover:text-black transition"
                         >
                             Facebook
+                        </a>
+                        <a
+                            href="https://www.instagram.com/odette_menyasszonyi_ruhaszalon"
+                            target="_blank"
+                            className="hover:text-black transition"
+                        >
+                            Instagram
+                        </a>
+                        <a
+                            href="https://www.tiktok.com/@odetteeskuvoiruhaszalon"
+                            target="_blank"
+                            className="hover:text-black transition"
+                        >
+                            Tiktok
                         </a>
                     </div>
 

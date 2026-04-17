@@ -27,7 +27,7 @@ export default function CollectionsPage() {
             <main style={{ backgroundColor: "var(--color-background)" }}>
 
                 {/* HERO */}
-                <div className="relative w-full h-[50vh] md:h-[60vh]">
+                <div className="relative w-full h-[50vh] md:h-[75vh] overflow-hidden">
                     <MotionImage
                         src="/collection-banner.webp"
                         loading="eager"

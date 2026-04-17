@@ -41,7 +41,7 @@ export default function Navbar() {
                 {/* LOGO */}
                 <Link
                     href="/"
-                    className="font-serif text-xl tracking-wide"
+                    className="font-serif tracking-tighter text-xl"
                     style={{ color: "var(--color-primary)" }}
                 >
                     Odette Menyasszonyi Ruhaszalon

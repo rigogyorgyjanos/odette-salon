@@ -20,7 +20,7 @@ export default function Footer() {
                     </div>
 
                     {/* NAV */}
-                    <div className="flex gap-6 text-sm text-black/70 underline underline-offset-2">
+                    <div className="flex gap-4 md:gap-6 text-sm text-black/70 underline underline-offset-2">
                         <a href="/" className="hover:text-black transition">Főoldal</a>
                         <a href="/#testimonials" className="hover:text-black transition">Vélemények</a>
                         <a href="/about" className="hover:text-black transition">Rólunk</a>

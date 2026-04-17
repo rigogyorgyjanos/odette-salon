@@ -61,7 +61,7 @@ export default function CollectionsPage() {
                         {collections.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="group relative w-full h-110 overflow-hidden rounded-lg"
+                                className="group relative w-full h-130 overflow-hidden rounded-lg"
                                 variants={itemVariants}
                                 initial="hidden"
                                 whileInView="visible"

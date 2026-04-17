@@ -26,7 +26,7 @@ export default function AboutPage() {
                     {/* HERO */}
                     <div className="relative w-full h-[50vh] md:h-[70vh]">
                         <MotionImage
-                            src="/banner_about.jpg"
+                            src="/banner_about.webp"
                             loading="eager"
                             alt="Kollekciók"
                             priority

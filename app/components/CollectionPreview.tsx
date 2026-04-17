@@ -80,7 +80,7 @@ export default function CollectionPreview() {
                     {collections.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="group relative w-full h-75 overflow-hidden rounded-lg"
+                            className="group relative w-full h-130 overflow-hidden rounded-lg"
                             variants={{
                                 hidden: { opacity: 0, y: 40 },
                                 visible: {

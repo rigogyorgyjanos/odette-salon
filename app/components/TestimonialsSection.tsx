@@ -9,8 +9,8 @@ import "swiper/css";
 
 const reviews = [
     {
-        name: "Anett Potornai",
-        text: "Nagyon jó élmény volt a ruhapróba, minden percét élveztem! Délia rendkívül kedves, türelmes és segítőkész volt, végig figyelt az elképzeléseimre. Ennek köszönhetően sikeresen meg is találtam A ruhámat. 🙌Szívből ajánlom az üzletet minden menyasszonynak!❤️",
+        name: "Renáta Gér-Tokaji",
+        text: "Már az első pillanattól fantasztikus élmény volt! Telefonon is nagyon kedvesek ,rugalmasak és segítőkészek voltak, a szalonban pedig Orsi, aki fogadott, hihetetlenül türelmes, és aranyos. Érezhető, hogy profik: alig fél óra alatt megtaláltam az igazi álomruhát – ráadásul ez volt az első szalon, ahová betértem, és már most tudom, hogy a legjobb döntés volt. A ruhapróba hangulata is különlegesen jó volt, végig kényelmesen és örömmel válogathattam. Sajnos képet még nem tudok mutatni, mert az esküvő csak jövőre lesz, de elmondhatom, hogy a ruha álomszép, mintha rám öntötték volna. Csak ajánlani tudom mindenkinek, aki szeretne stresszmentesen, igazi élményként ruhát választani a nagy napra!💕",
         rating: 5,
     },
     {
@@ -19,13 +19,13 @@ const reviews = [
         rating: 5,
     },
     {
-        name: "Lili Tárnyik",
-        text: "Az első ruhaszalon ahol jártam, és meg is találtam az álomruhámat! 😍 A kiszolgálás már az időpontfoglalástól kezdve profi volt, a próba jó hangulatához pedig Délia segítőkészsége és szakértelme nagyon sokat hozzátett! Minden menyasszonynak csak ajánlani tudom, ár-érték arányban, minőségben 10/10!",
+        name: "Sz. Dominika",
+        text: "Csodálatos élmény volt a szalonban! A ruhák gyönyörűek és minden apró részletre figyelnek. Hajni és Orsi rendkívül kedvesek, segítőkészek és türelmesek, végig támogattak a választásban. A próba hangulata stresszmentes és örömteli volt, a ruha pedig egyszerűen tökéletes lett 🥰",
         rating: 5,
     },
     {
-        name: "Sz. Dominika",
-        text: "Csodálatos élmény volt a szalonban! A ruhák gyönyörűek és minden apró részletre figyelnek. Hajni és Orsi rendkívül kedvesek, segítőkészek és türelmesek, végig támogattak a választásban. A próba hangulata stresszmentes és örömteli volt, a ruha pedig egyszerűen tökéletes lett 🥰",
+        name: "Lili Tárnyik",
+        text: "Az első ruhaszalon ahol jártam, és meg is találtam az álomruhámat! 😍 A kiszolgálás már az időpontfoglalástól kezdve profi volt, a próba jó hangulatához pedig Délia segítőkészsége és szakértelme nagyon sokat hozzátett! Minden menyasszonynak csak ajánlani tudom, ár-érték arányban, minőségben 10/10!",
         rating: 5,
     },
     {

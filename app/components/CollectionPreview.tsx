@@ -133,7 +133,8 @@ export default function CollectionPreview() {
                     transition={{ delay: 0.3, duration: 0.7 }}
                 >
                     <Link
-                        href="https://www.facebook.com/odetteszalon/photos"
+                        href="https://www.facebook.com/odetteszalon/photos_albums"
+                        target="_blank"
                         className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white"
                         style={{
                             borderColor: "var(--color-gold)",

@@ -29,7 +29,7 @@ export default function CollectionsPage() {
                 {/* HERO */}
                 <div className="relative w-full h-[50vh] md:h-[60vh]">
                     <MotionImage
-                        src="/collection-banner.jpg"
+                        src="/collection-banner.webp"
                         loading="eager"
                         alt="Kollekciók"
                         priority
@@ -61,7 +61,7 @@ export default function CollectionsPage() {
                         {collections.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="group relative w-full h-80 overflow-hidden rounded-lg"
+                                className="group relative w-full h-110 overflow-hidden rounded-lg"
                                 variants={itemVariants}
                                 initial="hidden"
                                 whileInView="visible"
@@ -109,7 +109,7 @@ export default function CollectionsPage() {
                         </p>
 
                         <Link
-                            href="https://www.facebook.com/odetteszalon/photos"
+                            href="https://www.facebook.com/odetteszalon/photos_albums"
                             target="_blank"
                             className="inline-block px-8 py-4 rounded-md text-sm border transition"
                             style={{ borderColor: "var(--color-gold)", color: "var(--color-gold)" }}

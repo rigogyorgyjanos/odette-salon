@@ -7,9 +7,21 @@ import Navbar from "../components/Navbar";
 import { motion, Variants } from "framer-motion";
 
 const collections = [
-    { title: "Klasszikus elegancia", image: "/classic.webp" },
-    { title: "Modern minimalizmus", image: "/modern.webp" },
-    { title: "Plus size", image: "/plus_size.webp" },
+    {
+        title: "Klasszikus elegancia",
+        image: "/classic.webp",
+        link: "https://www.facebook.com/media/set/?set=a.522665823307464&type=3",
+    },
+    {
+        title: "Modern minimalizmus",
+        image: "/modern.webp",
+        link: "https://www.facebook.com/media/set/?set=a.522665823307464&type=3",
+    },
+    {
+        title: "Plus size ",
+        image: "/plus_size.webp",
+        link: "https://www.facebook.com/media/set/?set=a.946883100885732&type=3"
+    },
 ];
 
 // Visszafogott animáció variáns
@@ -57,30 +69,66 @@ export default function CollectionsPage() {
                     </div>
 
                     {/* COLLECTION GRID */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 mb-20">
                         {collections.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="group relative w-full h-130 overflow-hidden rounded-lg"
-                                variants={itemVariants}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0.3 }}
+                                className="group relative w-full h-130 rounded-lg"
+                                variants={{
+                                    hidden: { opacity: 0, y: 40 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 0.8,
+                                            ease: [0.22, 1, 0.36, 1],
+                                        },
+                                    },
+                                }}
                             >
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    loading="lazy"
-                                    fill
-                                    className="object-cover transition duration-700 group-hover:scale-105"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                {/* IMAGE */}
+                                <motion.div
+                                    className="absolute overflow-hidden inset-0"
+                                    initial={{ scale: 1.1 }}
+                                    whileInView={{ scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition duration-500"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
-                                />
+                                    />
+                                </motion.div>
+
+                                {/* OVERLAY */}
                                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
+
+                                {/* TEXT */}
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <h3 className="text-white text-lg md:text-xl font-serif text-center px-4">
+                                    <h3 className="text-lg font-serif text-center px-2 text-white transition duration-300 group-hover:tracking-wide">
                                         {item.title}
                                     </h3>
+                                </div>
+
+                                {/* BUTTON LINK */}
+                                <div className="absolute left-1/2 -translate-x-1/2 text-center -bottom-5 z-10  w-full ">
+                                    <button
+                                        onClick={() => {
+                                            setTimeout(() => {
+                                                window.open(item.link, "_blank");
+                                            }, 300);
+                                        }}
+                                        className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white bg-white/75 backdrop-blur-sm shadow-md cursor-pointer"
+                                        style={{
+                                            borderColor: "var(--color-gold)",
+                                        }}
+                                    >
+                                        Facebook katalógus megtekintése
+                                    </button>
                                 </div>
                             </motion.div>
                         ))}
@@ -95,37 +143,6 @@ export default function CollectionsPage() {
                         <p>
                             Minden darab azért született, hogy megtaláld azt az egyetlen ruhát, amely igazán rólad szól.
                         </p>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="text-center pb-20 space-y-6">
-                        <p className="text-black/70">
-                            Tekintsd meg teljes kínálatunkat, és inspirálódj további modelljeinkből.
-                        </p>
-                        <p className="text-sm">
-                            Ruháink ára: <span className="font-medium" style={{ color: "var(--color-primary)" }}>
-                                150 000 – 250 000 Ft
-                            </span>
-                        </p>
-
-                        <Link
-                            href="https://www.facebook.com/odetteszalon/photos_albums"
-                            target="_blank"
-                            className="inline-block px-8 py-4 rounded-md text-sm border transition"
-                            style={{ borderColor: "var(--color-gold)", color: "var(--color-gold)" }}
-                            onMouseEnter={(e) => {
-                                const el = e.currentTarget as HTMLAnchorElement;
-                                el.style.backgroundColor = "var(--color-gold)";
-                                el.style.color = "white";
-                            }}
-                            onMouseLeave={(e) => {
-                                const el = e.currentTarget as HTMLAnchorElement;
-                                el.style.backgroundColor = "transparent";
-                                el.style.color = "var(--color-gold)";
-                            }}
-                        >
-                            Facebook katalógus megtekintése
-                        </Link>
                     </div>
 
                 </div>

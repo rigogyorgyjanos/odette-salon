@@ -8,14 +8,17 @@ const collections = [
     {
         title: "Klasszikus elegancia",
         image: "/classic.webp",
+        link: "https://www.facebook.com/media/set/?set=a.522665823307464&type=3",
     },
     {
         title: "Modern minimalizmus",
         image: "/modern.webp",
+        link: "https://www.facebook.com/media/set/?set=a.522665823307464&type=3",
     },
     {
         title: "Plus size ",
         image: "/plus_size.webp",
+        link: "https://www.facebook.com/media/set/?set=a.946883100885732&type=3"
     },
 ];
 
@@ -64,7 +67,7 @@ export default function CollectionPreview() {
 
                 {/* GRID */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
@@ -80,7 +83,7 @@ export default function CollectionPreview() {
                     {collections.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="group relative w-full h-130 overflow-hidden rounded-lg"
+                            className="group relative w-full h-130 rounded-lg"
                             variants={{
                                 hidden: { opacity: 0, y: 40 },
                                 visible: {
@@ -95,7 +98,7 @@ export default function CollectionPreview() {
                         >
                             {/* IMAGE */}
                             <motion.div
-                                className="absolute inset-0"
+                                className="absolute overflow-hidden inset-0"
                                 initial={{ scale: 1.1 }}
                                 whileInView={{ scale: 1 }}
                                 viewport={{ once: true }}
@@ -120,30 +123,26 @@ export default function CollectionPreview() {
                                     {item.title}
                                 </h3>
                             </div>
+
+                            {/* BUTTON LINK */}
+                            <div className="absolute left-1/2 -translate-x-1/2 text-center -bottom-5 z-10  w-full ">
+                                <button
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            window.open(item.link, "_blank");
+                                        }, 300);
+                                    }}
+                                    className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white bg-white/75 backdrop-blur-sm shadow-md cursor-pointer"
+                                    style={{
+                                        borderColor: "var(--color-gold)",
+                                    }}
+                                >
+                                    Facebook katalógus megtekintése
+                                </button>
+                            </div>
                         </motion.div>
                     ))}
                 </motion.div>
-
-                {/* CTA */}
-                <motion.div
-                    className="text-center mt-10"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.7 }}
-                >
-                    <Link
-                        href="https://www.facebook.com/odetteszalon/photos_albums"
-                        target="_blank"
-                        className="inline-block px-6 py-3 text-(--color-gold) rounded-md text-sm border transition hover:bg-(--color-gold) hover:text-white"
-                        style={{
-                            borderColor: "var(--color-gold)",
-                        }}
-                    >
-                        Facebook katalógus megtekintése
-                    </Link>
-                </motion.div>
-
             </div>
         </section>
     );

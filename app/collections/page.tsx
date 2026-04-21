@@ -46,7 +46,7 @@ export default function CollectionsPage() {
                         alt="Kollekciók"
                         priority
                         fill
-                        className="object-cover"
+                        className=" object-cover lg:object-[5%_30%] "
                         initial={{ scale: 1.05 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}

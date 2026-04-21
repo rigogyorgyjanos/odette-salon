@@ -14,18 +14,24 @@ export default function Footer() {
                         <img
                             src="/logo.png"
                             alt="Odette Szalon"
-                            className="h-30 "
+                            className="h-28 "
                         />
 
                     </div>
 
                     {/* NAV */}
-                    <div className="flex gap-4 md:gap-6 text-sm text-black/70 underline underline-offset-2">
-                        <a href="/" className="hover:text-black transition">Főoldal</a>
-                        <a href="/#testimonials" className="hover:text-black transition">Vélemények</a>
-                        <a href="/about" className="hover:text-black transition">Rólunk</a>
-                        <a href="/collections" className="hover:text-black transition">Kollekció</a>
-                        <a href="/contact" className="hover:text-black transition">Kapcsolat</a>
+                    <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-black/70 underline underline-offset-2">
+                        <a href="/">Főoldal</a>
+                        <a href="/#testimonials">Vélemények</a>
+                        <a href="/about">Rólunk</a>
+                        <a href="/collections">Kollekció</a>
+                        <a href="/contact">Kapcsolat</a>
+
+                        {/* törés */}
+                        <div className="w-full" />
+
+                        <a href="/aszf">ÁSZF</a>
+                        <a href="/adatkezelesi-tajekoztato">Adatkezelési tájékoztató</a>
                     </div>
 
                     {/* CONTACT */}

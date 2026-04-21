@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 
 type Section = {
     title: string;
-    content: string;
+    content: React.ReactNode;
     highlight?: boolean;
 };
 
@@ -34,13 +34,19 @@ A vásárlás végleges, a fizetés megtörténtével a termék a Vásárló tul
     },
     {
         title: "4. Visszavásárlás és elállás",
-        content: `A Szolgáltató semmilyen körülmények között nem vásárol vissza eladott ruhát, kiegészítőt vagy bármely terméket.
-
-Ez alól nincs kivétel, függetlenül attól, hogy a ruha mérete, stílusa, színe, vagy bármely más tulajdonsága a későbbiekben nem felel meg a Vásárló igényeinek, vagy az esküvő bármilyen okból elmarad.
-
-Személyes vásárlás esetén – a hatályos jogszabályok alapján – nem illeti meg a Vásárlót az elállás vagy a visszavásárlás joga.
-
-A ruhák kipróbálására és megtekintésére vásárlás előtt lehetőség van, így a döntés minden esetben tudatosan történik.`,
+        content: (
+            <>
+                A Szolgáltató semmilyen körülmények között nem vásárol vissza eladott ruhát, kiegészítőt vagy bármely terméket.
+                <br /><br />
+                Ez alól nincs kivétel, függetlenül attól, hogy a ruha mérete, stílusa, színe, vagy bármely más tulajdonsága a későbbiekben nem felel meg a Vásárló igényeinek, vagy az esküvő bármilyen okból elmarad.
+                <br /><br />
+                <strong>
+                    Személyes vásárlás esetén <span className="underline underline-offset-4 px-2">  – a hatályos jogszabályok alapján –  </span>nem illeti meg a Vásárlót az elállás vagy a visszavásárlás joga.
+                </strong>
+                <br /><br />
+                A ruhák kipróbálására és megtekintésére vásárlás előtt lehetőség van, így a döntés minden esetben tudatosan történik.
+            </>
+        ),
         highlight: true,
     },
     {
@@ -49,9 +55,13 @@ A ruhák kipróbálására és megtekintésére vásárlás előtt lehetőség v
     },
     {
         title: "6. Záró rendelkezések",
-        content: `A jelen ÁSZF-ben nem szabályozott kérdésekben a Polgári Törvénykönyv rendelkezései az irányadóak.
+        content: (
+            <>
+                A jelen ÁSZF-ben nem szabályozott kérdésekben a Polgári Törvénykönyv rendelkezései az irányadóak
 
-A Szolgáltató fenntartja a jogot jelen ÁSZF módosítására, amely a közzététel napjától érvényes.`,
+                A Szolgáltató fenntartja a jogot jelen ÁSZF módosítására, amely a közzététel napjától érvényes.,
+            </>
+        )
     },
 ];
 

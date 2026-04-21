@@ -4,13 +4,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+type Section = {
+    title: string;
+    content: React.ReactNode;
+};
 
-const sections = [
+const sections: Section[] = [
     {
         title: "1. Adatkezelő adatai",
-        content: `Név: Szőllősi Hajnalka egyéni vállalkozó
-Székhely: 1138 Budapest, Népfürdő utca 19/B
-Email: info@odetteszalon.hu`,
+        content: (
+            <>
+                Név: Szőllősi Hajnalka egyéni vállalkozó<br />
+                Székhely: 1138 Budapest, Népfürdő utca 19/B<br />
+                Email: <a className="underline underline-offset-2" href="mailto:info@odetteszalon.hu">info@odetteszalon.hu</a> 
+            </>
+        )
     },
     {
         title: "2. Kezelt adatok köre",
@@ -39,22 +47,36 @@ A weboldal működéséhez szükséges technikai adatok megőrzési ideje legfel
     },
     {
         title: "5. Adatfeldolgozó",
-        content: `Tárhelyszolgáltató:
-
-Név: ALINF BT
-Székhely: 2131 Göd, Köztársaság út 26
-Weboldal: https://www.alinf.hu/
-
-Az adatfeldolgozó a weboldal működéséhez szükséges technikai műveleteket végzi.`,
+        content: (
+            <>
+                Tárhelyszolgáltató:
+                <br />
+                <br />
+                Név: ALINF BT<br />
+                Székhely: 2131 Göd, Köztársaság út 26<br />
+                Weboldal: <a className="underline underline-offset-2" href=" https://www.alinf.hu/" target="_blank"> https://www.alinf.hu/</a><br />
+                <br />
+                <br />
+                Az adatfeldolgozó a weboldal működéséhez szükséges technikai műveleteket végzi.
+            </>
+        )
     },
     {
         title: "6. Külső szolgáltatás (Google Maps)",
-        content: `A weboldal Google Maps térképet használ.
+        content: (
+            <>
+                A weboldal Google Maps térképet használ.
+                <br />
+                <br />
 
-A térkép megjelenítése során a Google – mint külső szolgáltató – személyes adatokat (például IP cím) kezelhet.
-
-Ezen adatkezelés a Google saját adatkezelési szabályzata szerint történik:
-https://policies.google.com/privacy`,
+                A térkép megjelenítése során a Google – mint külső szolgáltató – személyes adatokat (például IP cím) kezelhet.
+                <br />
+                <br />
+                Ezen adatkezelés a Google saját adatkezelési szabályzata szerint történik:
+                <br />
+                <a className="underline underline-offset-2" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+            </>
+        )
     },
     {
         title: "7. Sütik (cookie-k)",
@@ -74,9 +96,14 @@ A szolgáltató a kérelmekre legkésőbb 30 napon belül válaszol.`,
     },
     {
         title: "9. Jogorvoslati lehetőségek",
-        content: `Az érintett panasszal élhet a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH).
-
-Weboldal: https://naih.hu`,
+        content: (
+            <>
+                Az érintett panasszal élhet a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH).
+                <br />
+                <br />
+                Weboldal: <a className="underline underline-offset-2" href="https://naih.hu" target="_blank"> https://naih.hu</a>
+            </>
+        )
     },
 ];
 
@@ -84,17 +111,17 @@ export default function AdatvedelemPage() {
     return (
         <>
             <Navbar />
-            <div className="mt-5 bg-[var(--color-background)] text-gray-800">
+            <div className="mt-5 bg-(--color-background) text-gray-800">
                 <div className="max-w-4xl mx-auto px-6 py-16">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-3xl md:text-4xl text-[var(--color-primary)] mb-4"
+                        className="text-3xl md:text-4xl text-(--color-primary) mb-4"
                     >
                         Adatkezelési tájékoztató
                     </motion.h1>
 
-                    <p className="text-sm text-gray-500 border-l-2 pl-4 border-[var(--color-gold)]">
+                    <p className="text-sm text-gray-500 border-l-2 pl-4 border-(--color-gold)">
                         Hatályos: visszavonásig
                     </p>
                 </div>
@@ -107,9 +134,9 @@ export default function AdatvedelemPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.05 }}
-                            className="rounded-2xl p-6 md:p-8 bg-white border border-gray-100 hover:border-[var(--color-gold)] transition"
+                            className="rounded-2xl p-6 md:p-8 bg-white border border-gray-100 hover:border-(--color-gold) transition"
                         >
-                            <h2 className="text-xl md:text-2xl text-[var(--color-primary)] mb-4">
+                            <h2 className="text-xl md:text-2xl text-(--color-primary) mb-4">
                                 {section.title}
                             </h2>
 

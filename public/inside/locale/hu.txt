@@ -1,0 +1,33 @@
+#: locale=hu
+
+## Action
+
+### URL
+LinkBehaviour_7B9F66F5_63CA_F8CD_41B4_8C38D7069B77.source = https://www.360latvany.hu/
+LinkBehaviour_4768D68E_508C_C321_41A7_320FC3A85653.source = https://www.360latvany.hu/
+LinkBehaviour_4D4E0268_43A2_7BCC_4194_29323258403C.source = https://www.odette.hu/
+LinkBehaviour_25FAD774_34B5_353D_41BE_D97152B5D79A.source = https://www.odette.hu/
+
+## Media
+
+### Title
+panorama_BB019162_B725_8149_41D3_18EE0D00F6B2.label = R0020787_HDR_er
+panorama_BC31C8CE_B725_8F59_414E_1AB52268906C.label = R0020788_HDR_er
+panorama_BC342F42_B725_8149_41DE_7A191FDEF83E.label = R0020789_HDR_er
+panorama_BC348618_B724_82FA_41D0_D0862D5EF043.label = R0020790_HDR_er
+panorama_B42EF44C_BB08_1E46_41D2_F94C73DCC7E8.label = R0020793_HDR_er
+
+## Skin
+
+### Image
+Image_25924D6C_34BB_552D_41C2_45E930AF9606.url = skin/Image_25924D6C_34BB_552D_41C2_45E930AF9606_hu.png
+Image_4777068E_508C_C321_41D0_7808297C1B87.url = skin/Image_4777068E_508C_C321_41D0_7808297C1B87_hu.png
+Image_4D4D3267_43A2_7BC4_418A_3139BDC44888.url = skin/Image_4D4D3267_43A2_7BC4_418A_3139BDC44888_hu.png
+Image_74B643C5_63CE_18C2_4171_4475E73F6665.url = skin/Image_74B643C5_63CE_18C2_4171_4475E73F6665_hu.png
+
+## Tour
+
+### Description
+
+### Title
+tour.name = Odette Menyasszonyi Ruhaszalon

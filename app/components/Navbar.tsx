@@ -59,6 +59,7 @@ export default function Navbar() {
                 {/* DESKTOP */}
                 <div className="hidden md:flex gap-8 text-sm font-medium">
                     <Link href="/about" style={{ color: "var(--color-primary)" }}>Rólunk</Link>
+                    <Link href="/inside" style={{ color: "var(--color-primary)" }}>Szalonélmény</Link>
                     <Link href="/#testimonials" style={{ color: "var(--color-primary)" }}>Vélemények</Link>
                     <Link href="/collections" style={{ color: "var(--color-primary)" }}>Kollekciók</Link>
                     <Link href="/contact" style={{ color: "var(--color-primary)" }}>Kapcsolat</Link>
@@ -116,6 +117,11 @@ export default function Navbar() {
                             <motion.div variants={itemVariants}>
                                 <Link href="/about" onClick={() => setOpen(false)} className="text-xl">
                                     Rólunk
+                                </Link>
+                            </motion.div>
+                            <motion.div variants={itemVariants}>
+                                <Link href="/inside" onClick={() => setOpen(false)} className="text-xl">
+                                    Szalonélmény
                                 </Link>
                             </motion.div>
 

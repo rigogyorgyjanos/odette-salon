@@ -23,7 +23,7 @@ export default function Footer() {
                     <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-black/70 underline underline-offset-2">
                         <a href="/">Főoldal</a>
                         <a href="/about">Rólunk</a>
-                        <a href="/inside">Szalonélmény</a>
+                        <a href="/inside">Virtuális bejárás</a>
                         <a href="/#testimonials">Vélemények</a>
                         <a href="/collections">Kollekció</a>
                         <a href="/contact">Kapcsolat</a>

@@ -159,6 +159,56 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                             </motion.div>
+                            {/* AWARD SECTION */}
+                            <motion.div
+                                className=" w-full mt-20 mb-10"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                style={{ backgroundColor: "var(--color-blush)" }}
+                            >
+                                <div
+                                    className=" overflow-hidden shadow-sm md:flex"
+
+                                >
+
+
+                                    {/* TEXT */}
+                                    <div className="md:w-1/2 w-full p-6 md:p-10 flex flex-col justify-center text-center md:text-left">
+
+                                        {/* TITLE */}
+                                        <h3
+                                            className="text-xl md:text-2xl font-serif mb-4"
+                                            style={{ color: "var(--color-primary)" }}
+                                        >
+                                            Tisztességes Vállalkozás Tanusítvány 2026
+                                        </h3>
+
+                                        {/* TEXT */}
+                                        <p className="text-sm md:text-base text-black/70 leading-relaxed mb-4">
+                                            Büszkék vagyunk rá, hogy szalonunk megszerezte a{" "}
+                                            <span style={{ color: "var(--color-primary)", fontWeight: 500 }}>
+                                                2026-es Tisztességes Vállalkozás Tanusítványt
+                                            </span>.
+                                        </p>
+
+                                        <p className="text-sm md:text-base text-black/70 leading-relaxed">
+                                            Ez a kiemelkedő eredmény igazolja vállalkozásunk kifogástalan online hírnevét, valamint elkötelezettségünket a legmagasabb 
+                                            szolgáltatási színvonal nyújtásához.
+                                        </p>
+
+                                    </div>
+                                    {/* IMAGE */}
+                                    <div className="md:w-1/2 w-full">
+                                        <img
+                                            src="/logo_hu_regular_2026.png" // <-- ide tedd a képed
+                                            alt="Turul Esküvő Díj 2024"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                </div>
+                            </motion.div>
 
                         </div>
                     </div>

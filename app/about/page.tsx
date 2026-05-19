@@ -189,7 +189,7 @@ export default function AboutPage() {
                                         <p className="text-sm md:text-base text-black/70 leading-relaxed mb-4">
                                             Büszkék vagyunk rá, hogy szalonunk megszerezte a{" "}
                                             <span style={{ color: "var(--color-primary)", fontWeight: 500 }}>
-                                                2026-es Tisztességes Vállalkozás Tanusítványt
+                                                2026-es Tisztességes Vállalkozás Tanúsítványt
                                             </span>.
                                         </p>
 

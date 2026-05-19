@@ -182,7 +182,7 @@ export default function AboutPage() {
                                             className="text-xl md:text-2xl font-serif mb-4"
                                             style={{ color: "var(--color-primary)" }}
                                         >
-                                            Tisztességes Vállalkozás Tanusítvány 2026
+                                            Tisztességes Vállalkozás Tanúsítvány 2026
                                         </h3>
 
                                         {/* TEXT */}

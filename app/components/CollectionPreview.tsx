@@ -50,6 +50,9 @@ export default function CollectionPreview() {
                     >
                         Fedezd fel különböző stílusainkat, és találd meg a hozzád illőt.
                     </p>
+                    <p>
+                        Kövess minket <span className="underline underline-offset-2  " style={{ color: "var(--color-primary)" }}> <a href="https://www.facebook.com/odetteszalon" target="_blank">Facebookon</a></span>  az aktuális akciókért és újdonságokért!
+                    </p>
                     <motion.div
                         className="text-center mb-8 mt-4 text-black/60 text-sm md:text-base"
                         initial={{ opacity: 0, y: 10 }}
@@ -58,9 +61,10 @@ export default function CollectionPreview() {
                     >
                         <p>
                             Ruháink ára: <span className="font-medium" style={{ color: "var(--color-primary)" }}>
-                                150 000 – 250 000 Ft
+                                150 000 – 300 000 Ft
                             </span>
                         </p>
+
                     </motion.div>
 
                 </motion.div>

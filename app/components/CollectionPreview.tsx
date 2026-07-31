@@ -39,7 +39,7 @@ export default function CollectionPreview() {
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <h2
-                        className="text-3xl md:text-5xl font-serif mb-4"
+                        className="text-3xl md:text-5xl font-serif mb-8"
                         style={{ color: "var(--color-primary)" }}
                     >
                         Kollekciók
@@ -51,7 +51,7 @@ export default function CollectionPreview() {
                         Fedezd fel különböző stílusainkat, és találd meg a hozzád illőt.
                     </p>
                     <p>
-                        Kövess minket <span className="underline underline-offset-2  " style={{ color: "var(--color-primary)" }}> <a href="https://www.facebook.com/odetteszalon" target="_blank">Facebookon</a></span>  az aktuális akciókért és újdonságokért!
+                        Kövess minket <span className=" font-semibold  " style={{ color: "var(--color-primary)" }}> <a href="https://www.facebook.com/odetteszalon" target="_blank">Facebookon</a></span>  az aktuális akciókért és újdonságokért!
                     </p>
                     <motion.div
                         className="text-center mb-8 mt-4 text-black/60 text-sm md:text-base"
